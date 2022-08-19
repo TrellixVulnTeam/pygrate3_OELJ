@@ -8013,6 +8013,8 @@ static slotdef slotdefs[] = {
     TPSLOT("__getattr__", tp_getattr, NULL, NULL, ""),
     TPSLOT("__setattr__", tp_setattr, NULL, NULL, ""),
     TPSLOT("__delattr__", tp_setattr, NULL, NULL, ""),
+    TPSLOT("__cmp__", tp_richcompare, slot_tp_richcompare, richcmp_le,
+           "x.__cmp__(y) <==> cmp(x,y)"),
     TPSLOT("__repr__", tp_repr, slot_tp_repr, wrap_unaryfunc,
            "__repr__($self, /)\n--\n\nReturn repr(self)."),
     TPSLOT("__hash__", tp_hash, slot_tp_hash, wrap_hashfunc,
