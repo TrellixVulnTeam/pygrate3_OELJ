@@ -1017,7 +1017,6 @@ class MappingProxyTests(unittest.TestCase):
              '__contains__',
              '__getitem__',
              '__class_getitem__',
-             '__cmp__',
              '__ior__',
              '__iter__',
              '__len__',
